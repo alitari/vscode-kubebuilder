@@ -4,13 +4,13 @@ Start right away with a development environment for [kubebuilder](https://github
 
 ## Preparation steps
 
-We asume you have a running docker daemon and working connection to a kubernetes cluster.
+We assume you have a running docker daemon and a working connection to a kubernetes cluster.
 
 1. [configure vscode in order to be able to use Visual Studio Code Remote - Containers](https://code.visualstudio.com/docs/remote/containers#_installation)
 2. configure connection to your k8s cluster: copy your kubernetes config file to the `.devcontainer` directory. e.g. `cp ~/.kube/config .devcontainer`
 3. use this repo as remote container: Press <kbd>F1</kbd> and select the Remote-Containers: Open Folder in Container... command.
 
-After vscode is has been setup ( can last a few minutes for the first time) check wether all tools are present:
+After vscode is has been setup ( can last a few minutes for the first time) check whether all tools are present:
 
 ```bash
 # k8s cluster
@@ -56,11 +56,15 @@ standard with make `make run` or press <kbd>F5</kbd> for debugging with vscode
 
 ### install CR
 
+```bash
 kubectl apply -f config/samples/
+```
 
 ### build controller image
 
+```bash
 make docker-build IMG=guestbook-controller:latest
+```
 
 ### push controller image
 

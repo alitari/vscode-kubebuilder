@@ -22,7 +22,8 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
-		"ms-vscode.go"
+		"ms-vscode.go",
+		"ms-kubernetes-tools.vscode-kubernetes-tools"
 	],
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "go version",
